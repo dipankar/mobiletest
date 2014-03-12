@@ -16,6 +16,7 @@
 
 <template name="res_normal">
 <h2>Normal</h2>
+<img src="{{ data.image }}"/><br/>
 {{#eachProperty data}}
     {{property}}: {{value}}<br/>
 {{/eachProperty }}
@@ -23,6 +24,7 @@
 
 <template name="res_mobile">
 <h2>Klipped</h2>
+<img src="{{ data.image }}"/><br/>
 {{#eachProperty data}}
     {{property}}: {{value}}<br/>
 {{/eachProperty }}
