@@ -1,0 +1,29 @@
+<head>
+   <title>Mobile speed test</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+   <h1>Enter the URL</h1>
+   URL: <input id="url" type="text"><button type="submit">Start</button>
+   <div style="clear:both;"></div>
+   <div style="width:50%;float:right;">{{> res_normal}}</div>
+   <div style="width:50%;float:left;">{{> res_mobile}}</div>
+</template>
+
+<template name="res_normal">
+<h2>Normal</h2>
+{{#eachProperty data}}
+    {{property}}: {{value}}<br/>
+{{/eachProperty }}
+</template>
+
+<template name="res_mobile">
+<h2>Klipped</h2>
+{{#eachProperty data}}
+    {{property}}: {{value}}<br/>
+{{/eachProperty }}
+</template>
