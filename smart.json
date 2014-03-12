@@ -1,5 +1,6 @@
 {
   "packages": {
-    "crypto-md5": {}
+    "crypto-md5": {},
+    "npm": {}
   }
 }

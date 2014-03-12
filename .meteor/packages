@@ -8,3 +8,4 @@ autopublish
 insecure
 preserve-inputs
 crypto-md5
+npm

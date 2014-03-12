@@ -44,7 +44,7 @@ if (Meteor.isServer) {
   });
   Meteor.startup(function () {
      Future = Npm.require('fibers/future');
-     phantomas = Npm.require('phantomas');
+     phantomas = Meteor.require('phantomas');
     // code to run on server at startup
   });
 }
