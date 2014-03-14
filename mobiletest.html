@@ -7,24 +7,25 @@
 </body>
 
 <template name="hello">
-   <h1>Enter the URL</h1>
-   URL: <input id="url" type="text"><button type="submit">Start</button>
+   <h1>Mobile browser testing</h1>
+   Mobile site url <input id="url" type="text"><button type="submit">Start</button><br>
+   Please make sure the url does not redirect for accurate testing results.
    <div style="clear:both;"></div>
-   <div style="width:50%;float:right;">{{> res_normal}}</div>
-   <div style="width:50%;float:left;">{{> res_mobile}}</div>
+   <div style="width:50%;float:right;">{{> res_mobile}}</div>
+   <div style="width:50%;float:left;">{{> res_normal}}</div>
 </template>
 
 <template name="res_normal">
 <h2>Normal</h2>
-<img src="{{ data.image }}"/><br/>
+<div style="height:{{ data.height }}px;overflow:hidden;"><img src="data:image/png;base64,{{ data.image }}"/></div>
 {{#eachProperty data}}
-    {{property}}: {{value}}<br/>
+{{property}}: {{value}}<br/>
 {{/eachProperty }}
 </template>
 
 <template name="res_mobile">
-<h2>Klipped</h2>
-<img src="{{ data.image }}"/><br/>
+<h2>Klipper</h2>
+<div style="height:{{ data.height }}px;overflow:hidden;"><img src="data:image/png;base64,{{ data.image }}"/></div>
 {{#eachProperty data}}
     {{property}}: {{value}}<br/>
 {{/eachProperty }}
